@@ -2,7 +2,7 @@
 .doc a[href^="http://"]:not([href*=".couchbase.com"]):not([href*="localhost"]):not([href*="127.0.0.1"]):not(.remove-ext-icon)::after,
 a.add-ext-icon::after {
   font-family: "Font Awesome Light", serif;
-  content: "\f35d";
+  content: "\f35d"; /* alternate external link icon */
   font-size: inherit;
   color: inherit;
   display: none;

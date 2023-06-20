@@ -1,6 +1,5 @@
-/* .sidebar-box .tools {
-  margin-left: 0.75rem;
-} */
+/* e.g. "Edit on Github" */
+
 .tools ul {
   margin: 0;
   padding: 0;
@@ -16,9 +15,6 @@
 
 .tools .edit a {
   display: inline-block;
-  /* width: 100%;
-  height: 100%;
-  text-indent: 100%; */
   white-space: nowrap;
   overflow: hidden;
   background: url(../img/edit.svg) no-repeat center left;

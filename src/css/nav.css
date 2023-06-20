@@ -117,7 +117,6 @@
 }
 
 .menu_list.is-current-page > .menu_line {
-  /* background: #4287d60f; */
   border-right: 4px solid rgba(66, 135, 214, 0.44);
   font-weight: var(--weight-semibold);
 }
@@ -129,7 +128,6 @@
   word-break: break-word;
   font-family: 'Source Sans Pro', sans-serif;
   text-decoration: none;
-  /* padding: 0.25rem 0; */
 }
 
 a.menu_link {

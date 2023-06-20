@@ -45,17 +45,9 @@ table.tableblock thead th {
   font-weight: var(--weight-semibold);
 }
 
-/* table.tableblock tbody td:first-child strong {
-  font-size: 1.125rem;
-} */
-
 table.tableblock tbody tr {
   display: table-cell;
 }
-
-/* .tableblock tbody tr :hover{
-    background: var(--color-brand-gray7);
-  } */
 
 table.tableblock > tbody td,
 table.tableblock > tbody th {
@@ -85,21 +77,6 @@ table.tableblock tbody td.tableblock p.tableblock {
   margin-top: 1rem;
 }
 
-/* table.tableblock .content .paragraph,
-table.tableblock .content .ulist {
-  margin-top: 0;
-} */
-
-/* table.tableblock tr:nth-child(odd) {
-    background: rgba(0, 0, 0, 0.07);g29
-
-  }
-   */
-
-/* table.tableblock tbody tr:hover {
-    background: var(--color-brand-gray7);
-} */
-
 table.tableblock .title {
   display: inline-block;
   width: 100%;
@@ -110,11 +87,6 @@ table.tableblock .title {
 .doc .admonitionblock td.icon {
   border-bottom: none;
 }
-
-/* table.table-merge-cells tr:hover {
-  background-color: var(--color-brand-gray7);
-}
-*/
 
 table.table-tutorial tr th:last-child,
 table.table-tutorial tr td:last-child {
@@ -152,7 +124,6 @@ table.table-tutorial tr td:last-child {
 }
 
 /* Responsive css  */
-
 @media screen and (min-width: 768px) {
   table.tableblock {
     display: table;
