@@ -1,3 +1,14 @@
+/** home.css
+ * 
+ *  Styles for .home
+ *  NB: not sure where this is? Landing pages?
+ *  We can have body, div, main with class of .home
+ *  via layout: home
+ *  But grep suggests this may no longer be used.
+ *  
+ *  Also for .tutorials and .searchbar
+ */
+
 .home .paragraph {
   margin-top: 1.25rem;
 }

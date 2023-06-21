@@ -1,3 +1,13 @@
+/** main.css
+ * 
+ *  Styles for:
+
+  <main class="article" data-ceiling="topbar">
+    <div class="article-header">...
+    <article class="doc">...
+
+ */
+
 main {
   padding-bottom: 4rem;
 }
@@ -43,6 +53,7 @@ main p {
   hyphens: auto; /* NOTE in Chrome, hyphens: auto is only supported on macOS and Android */
 }
 
+/* The "You are viewing a pre-release" banner */
 .article-banner {
   align-items: center;
   background: transparent;
@@ -113,7 +124,7 @@ main p {
   min-width: 0;
 }
 
-/* color css  */
+/* color css  NB: unused? */
 .text-color-brand-blue {
   color: var(--color-brand-blue);
 }
