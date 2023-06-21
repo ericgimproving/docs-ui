@@ -32,8 +32,7 @@
 @import "landing-page.css";
 
 /* Other components */
-@import "asciidoctor-external-callout.css";
-@import "disable-callouts.css";
+@import "callouts.css";
 @import "clipboard.css";
 @import "component-frame.css";
 @import "crumbs.css";
