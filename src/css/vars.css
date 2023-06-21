@@ -1,14 +1,13 @@
 :root {
-    
   /* NOTE tint colors are 15% transparent */
-  
+
   /* primary */
   --color-brand-primary: #262626;
   --color-brand-black: #000;
   --color-brand-red: #ea2328;
   --color-brand-red-tint: #fcdedf;
   --color-brand-white: #fff;
-  
+
   /* secondary */
   --color-brand-secondary: #fff;
   --color-brand-blue: #4287d6;
@@ -24,7 +23,7 @@
   --color-brand-important: #b36cdb;
   --color-brand-warning: #ea2328;
   --color-brand-caution: #ff8f00;
-  
+
   /* tertiary */
   --color-gray-rgb: 115, 118, 138;
   --color-brand-gray1: #292b36;
@@ -44,7 +43,6 @@
   --color-brand-grey: #666;
   --color-brand-orange: #fc9c0c;
   --color-brand-orange-tint: #fff0da;
-  
   --color-muted: var(--color-brand-gray);
   --color-text: #333;
   --color-code: var(--color-brand-pink);
@@ -57,6 +55,7 @@
   --color-link-active: var(--color-brand-blue-secondary-light);
   --color-link-hover: var(--color-brand-blue-secondary-extra-light);
 
+  /* other colors */
   --color-border-table: #dadada;
   --color-shade: #f3f3f3;
   --color-navbar-bg: var(--color-brand-black);
@@ -69,11 +68,11 @@
   --hljs-attr: #407787;
   --hljs-string: #295d1e;
   --hljs-number: #0711ba;
-  
+
   /* Color brand tabsets */
   --color-active-tabset: #57a1ff;
 
-  /* heights and widths */
+  /* heights */
   --height-spacer: 1.1rem;
   --height-navbar: 6rem;
   --height-version-control: 4.5rem;
@@ -87,6 +86,7 @@
   --nav-menu-top-space: calc(var(--height-to-body) + var(--height-version-control));
   --h2-heading-top-space: calc(var(--height-to-body) + 0.5rem);
 
+  /* widths */
   --width-main-gutter: 2.5rem;
   --width-container: 90rem;
   --width-container-fluid: 100%;
@@ -101,7 +101,7 @@
   --weight-medium: 500;
   --weight-semibold: 600;
   --weight-bold: 700;
-  
+
   /* Z-index  */
   --z-index-feedback: 8;
   --z-index-nav-toggle: 7;

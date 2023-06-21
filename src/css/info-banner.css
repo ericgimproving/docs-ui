@@ -1,13 +1,12 @@
 /** info-banner.css
- * 
+ *
  * Home pages all have
  *
  *    include::home::partial$info-banner.adoc[]
- * 
+ *
  * The partial itself may be switched off
  * (e.g. commented out)
  * to remove the element from all pages.
- *
  */
 
 .info-banner {
