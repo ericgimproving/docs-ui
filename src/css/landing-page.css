@@ -1,4 +1,7 @@
-/* Landing Page CSS  */
+/** landing-page.css
+ * 
+ *  Styles for Landing Pages
+ */
 
 .doc.landing-page-doc h1 {
   color: var(--color-brand-gray1);
