@@ -1,6 +1,4 @@
 
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&display=swap");
-
 .is-this-helpful-box * {
   font-family: "Source Sans Pro", sans-serif;
 }
@@ -9,7 +7,6 @@
   display: inline-block;
   width: 100%;
   margin-bottom: 25px;
-  /* border-top: 1px solid #ccc; */
   padding-top: 25px;
   font-family: "Source Sans Pro", sans-serif;
 }

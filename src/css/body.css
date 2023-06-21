@@ -1,6 +1,10 @@
-/* NOTE
-  min-width of flex: 1 container = content-width to prevent wrapping by default; 
-  min-width: 0 lets content wrap */
+/** body.css
+ * 
+ *  Styles for body, main, and .nav
+ *  TODO: compare main.css and nav.css
+ */
+
+
   
 div.body {
   display: flex;
@@ -15,6 +19,9 @@ div.body {
   margin-top: var(--height-navbar);
 }
 
+/* NOTE
+  min-width of flex: 1 container = content-width to prevent wrapping by default; 
+  min-width: 0 lets content wrap */
 main {
   flex: 1;
   min-width: 0;

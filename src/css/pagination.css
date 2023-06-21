@@ -1,3 +1,12 @@
+/** pagination.css
+ * 
+ *  Styles for Prev and Next navigation, enabled on some pages 
+ *  by e.g.:
+ *    :page-pagination: full
+ *  
+ *  See e.g. https://docs.couchbase.com/php-sdk/current/hello-world/platform-help.html
+ */
+
 nav.pagination {
   display: flex;
   border-top: 1px solid var(--color-border-table);

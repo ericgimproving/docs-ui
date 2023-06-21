@@ -1,3 +1,8 @@
+/** header.css
+ * 
+ *  Styles for header
+ */
+
 .header-top-row {
   background: var(--color-brand-white);
   padding: 0 var(--width-container-gutter);
@@ -195,7 +200,7 @@
 }
 
 .navbar-dropdown li.current a.navbar-item::before {
-  content: "\2023";
+  content: "\2023"; /* ‣ */
   position: absolute;
   left: -0.75em;
 }
