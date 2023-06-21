@@ -1,5 +1,5 @@
 /** main.css
- * 
+ *
  *  Styles for:
 
   <main class="article" data-ceiling="topbar">
@@ -12,7 +12,7 @@ main {
   padding-bottom: 4rem;
 }
 
-/* IMPORTANT for this to work, the element cannot be display: flex 
+/* IMPORTANT for this to work, the element cannot be display: flex
    and cannot have padding top or border top */
 main [id]::before {
   content: "";

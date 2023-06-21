@@ -1,5 +1,5 @@
 /** toc.css
- * 
+ *
  *  Styles for Table of Contents
  *  which also includes:
  *   - Tools (edit on github)
@@ -15,8 +15,6 @@
   margin-top: var(--base-large-space);
   line-height: 1;
 }
-
-
 
 .toc.embedded .toc-menu {
   margin-top: 1rem;
