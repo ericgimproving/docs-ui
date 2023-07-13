@@ -98,6 +98,8 @@
         }
         var activeLink = links[activeFragment]
         activeLink.classList.add('is-active')
+        activeLink.scrollIntoView({ behavior: 'smooth' })
+        activeLink.focus()
         if (menu.scrollHeight > menu.offsetHeight) {
           menu.scrollTop = Math.max(0, activeLink.offsetTop + activeLink.offsetHeight - menu.offsetHeight)
         }
