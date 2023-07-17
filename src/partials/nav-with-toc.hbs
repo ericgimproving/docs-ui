@@ -1,5 +1,21 @@
 <aside class="nav left-sidebar">
   <div class="nav-container">
-    {{> toc}}
+  
+  <div class="components">
+  {{#with (nav-group-for-page (nav-groups))}}
+  <div class="components_group-title">
+    {{#if ./url}}<a href="{{relativize ./url}}">{{{./title}}}</a>{{else}}{{{./title}}}{{/if}}
+  </div>
+  {{/with}}
+  </div>
+
+  <aside class="toc sidebar"
+        data-title="{{or page.attributes.toctitle 'Contents'}}"
+        data-levels="{{{or page.attributes.toclevels 1}}}">
+    <div class="sidebar-box">
+      <div class="toc-menu"></div>
+    </div>
+  </aside>  
+  
   </div>
 </aside>
