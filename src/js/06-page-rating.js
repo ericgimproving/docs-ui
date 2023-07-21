@@ -78,7 +78,7 @@
       'summary': `Feedback on ${document.title}`,
       'customfield_11580': window.location.href,
       'description': `\n\nBrowser environment: ${navigator.userAgent}`,
-      'components': `${document.getElementById('feedbackTrigger').dataset['jira-component-id']}`,
+      'components': `${document.getElementById('feedbackTrigger').dataset.jiraComponentId]}`,
     },
   }
 
