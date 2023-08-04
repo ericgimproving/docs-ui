@@ -79,10 +79,15 @@ table.tableblock tbody td.tableblock p.tableblock {
 }
 
 table.tableblock .title {
-  display: inline-block;
+  /* display: table-caption;
+    compresses caption on e.g.
+    https://docs.couchbase.com/server/current/backup-restore/enterprise-backup-restore.html
+    into single cell at width < 768px.
+    */
+  display: block;
   width: 100%;
   padding: 10px 0 0;
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 
 .doc .admonitionblock td.icon {
@@ -129,12 +134,6 @@ table.table-tutorial tr td:last-child {
   table.tableblock {
     display: table;
     position: relative;
-  }
-
-  table.tableblock caption.title {
-    position: absolute;
-    left: 0;
-    top: -30px;
   }
 
   table.tableblock.caption-table,
