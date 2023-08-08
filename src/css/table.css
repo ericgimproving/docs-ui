@@ -84,7 +84,6 @@ table.tableblock .title {
     https://docs.couchbase.com/server/current/backup-restore/enterprise-backup-restore.html
     into single cell at width < 768px.
     */
-  display: block;
   width: 100%;
   padding: 10px 0 0;
   margin: 10px 0;
