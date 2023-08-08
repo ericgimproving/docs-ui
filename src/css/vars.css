@@ -84,7 +84,8 @@
   --height-nav: calc(var(--height-min-body) + var(--height-spacer) - var(--height-footer));
   --height-nav-with-version: calc(100vh - var(--height-to-body) - var(--height-version-control));
   --nav-menu-top-space: calc(var(--height-to-body) + var(--height-version-control));
-  --h2-heading-top-space: calc(var(--height-to-body) + 0.5rem);
+  --scroll-margin-top-space: calc(var(--height-to-body) + 0.5rem);
+  --scroll-margin-top-space-plus-banner: calc(var(--height-to-body) + 0.5rem + 5rem);
 
   /* widths */
   --width-main-gutter: 2.5rem;
