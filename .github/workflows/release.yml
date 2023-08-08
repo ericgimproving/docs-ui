@@ -1,0 +1,26 @@
+name: Test release UI bundle
+
+on:
+  push:
+    branches:
+      - automate-ui-bundle
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: npm
+        run: |
+          npm install
+      - name: ngulp
+        run: |
+          npx gulp bundle
+          
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: bundle
+          path: build/ui-bundle.zip
+          retention-days: 5
