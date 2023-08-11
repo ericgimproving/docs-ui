@@ -1,4 +1,4 @@
-name: Test release UI bundle
+name: Release UI bundle
 
 on:
   push:
@@ -6,9 +6,9 @@ on:
       - automate-ui-bundle
 
 jobs:
-  build_and_test:
+  release:
     permissions:
-      contents: read
+      contents: write
       packages: write
     
     runs-on: ubuntu-latest
