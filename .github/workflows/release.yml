@@ -9,6 +9,10 @@ jobs:
   build_and_test:
     permissions:
       contents: write
+      deployments: write
+      packages: write
+      repository-projects: write
+      statuses: write
     
     runs-on: ubuntu-latest
     steps:
