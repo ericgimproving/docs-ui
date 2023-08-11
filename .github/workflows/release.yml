@@ -13,6 +13,7 @@ jobs:
       packages: write
       repository-projects: write
       statuses: write
+      pull-requests: write
     
     runs-on: ubuntu-latest
     steps:
