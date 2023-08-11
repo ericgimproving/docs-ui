@@ -24,3 +24,6 @@ jobs:
           name: bundle
           path: build/ui-bundle.zip
           retention-days: 5
+
+      - name: Test rel
+        run: npx gulp release
