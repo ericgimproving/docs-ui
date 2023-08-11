@@ -1,6 +1,6 @@
 = Couchbase Documentation UI
 // Variables:
-:current-release: prod-171
+:current-release: automate-ui-bundle-1
 // Settings:
 :!example-caption:
 :experimental:
