@@ -23,9 +23,7 @@ function getNextReleaseNumber ({ octokit, owner, repo, variant }) {
 }
 
 function collectReleases ({ octokit, owner, repo, filter, page = 1, accum = [] }) {
-  console.log('collecting releases')
   return octokit.repos.listReleases({ owner, repo, page, per_page: 100 }).then((result) => {
-    console.log('colelcted')
     const releases = result.data.filter(filter)
     const links = result.headers.link
     if (links && links.includes('; rel="next"')) {
@@ -57,7 +55,6 @@ function versionBundle (bundleFile, tagName) {
 
 module.exports = (dest, bundleName, owner, repo, token, updateBranch) => async () => {
   const octokit = new Octokit({ auth: `token ${token}` })
-  console.log('Octokit created')
   let branchName = process.env.GIT_BRANCH || 'master'
   if (branchName.startsWith('origin/')) branchName = branchName.substr(7)
   const variant = branchName === 'master' ? 'prod' : branchName
@@ -66,9 +63,7 @@ module.exports = (dest, bundleName, owner, repo, token, updateBranch) => async (
   const message = `Release ${tagName}`
   const bundleFileBasename = `${bundleName}-bundle.zip`
   const bundleFile = await versionBundle(path.join(dest, bundleFileBasename), tagName)
-  console.log('getting refs')
   let commit = await octokit.git.getRef({ owner, repo, ref }).then((result) => result.data.object.sha)
-  console.log('refs fetched')
   const readmeContent = await fs
     .readFile('README.adoc', 'utf-8')
     .then((contents) => contents.replace(/^(?:\/\/)?(:current-release: ).+$/m, `$1${tagName}`))
@@ -76,9 +71,7 @@ module.exports = (dest, bundleName, owner, repo, token, updateBranch) => async (
     .createBlob({ owner, repo, content: readmeContent, encoding: 'utf-8' })
     .then((result) => result.data.sha)
 
-  console.log('getting commit')
   let tree = await octokit.git.getCommit({ owner, repo, commit_sha: commit }).then((result) => result.data.tree.sha)
-  console.log('got commit')
   tree = await octokit.git
     .createTree({
       owner,
@@ -87,14 +80,11 @@ module.exports = (dest, bundleName, owner, repo, token, updateBranch) => async (
       base_tree: tree,
     })
     .then((result) => result.data.sha)
-  console.log('writing commit')
   commit = await octokit.git
     .createCommit({ owner, repo, message, tree, parents: [commit] })
     .then((result) => result.data.sha)
-  console.log('commit commited')
   if (updateBranch) await octokit.git.updateRef({ owner, repo, ref, sha: commit })
 
-  console.log('creating release')
   const uploadUrl = await octokit.repos
     .createRelease({
       owner,
@@ -104,9 +94,7 @@ module.exports = (dest, bundleName, owner, repo, token, updateBranch) => async (
       name: tagName,
     })
     .then((result) => result.data.upload_url)
-  console.log('released')
 
-  console.log('upload ass')
   await octokit.repos.uploadReleaseAsset({
     url: uploadUrl,
     data: fs.createReadStream(bundleFile),
@@ -116,5 +104,4 @@ module.exports = (dest, bundleName, owner, repo, token, updateBranch) => async (
       'content-type': 'application/zip',
     },
   })
-  console.log('ass done')
 }
