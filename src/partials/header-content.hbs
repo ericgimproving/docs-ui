@@ -54,7 +54,7 @@
                   {{/each}}
 
                   {{#with @root.page.attributes}}
-                    {{#if (metadata-playbook)}}
+                    {{#if metadata-playbook}}
                     <li>
                       Playbook:{{metadata-playbook}} Branch:{{metadata-branch}} Build-url: {{metadata-build-url}} Build-time: {{metadata-build-time}} Sha: {{metadata-sha}}
                     </li>
