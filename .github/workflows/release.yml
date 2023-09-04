@@ -5,6 +5,7 @@ on:
     branches:
       - master
       - sandbox
+      - remove-release-commit
 
 jobs:
   release:
