@@ -76,6 +76,7 @@
       component: head.querySelector('meta[name="dcterms.subject"]').getAttribute('content'),
       version: head.querySelector('meta[name="dcterms.identifier"]').getAttribute('content'),
       url: head.querySelector('meta[name=page-url]').getAttribute('content'),
+      navHeaderLevels: head.querySelector('meta[name="page-nav-header-levels"]')?.content || 0,
     }
   }
 
@@ -231,7 +232,15 @@
           navLineEl.insertBefore(Object.assign(document.createElement('span'), { className: 'in-toggle' }), navTextEl)
         }
         navItemEl.classList.add('is-parent')
-        if (!navItemEl.querySelector('a.is-current-page')) navItemEl.classList.add('closed')
+
+        // Depending on depth, we may wish to collapse the level.
+        // originally we would collapse everything, but we can set :page-nav-header-levels: 1 to have
+        // up to the bold subheadings kept open
+        if (currentPath.length > page.navHeaderLevels) {
+          if (!navItemEl.querySelector('a.is-current-page')) {
+            navItemEl.classList.add('closed')
+          }
+        }
       }
       navListEl.appendChild(navItemEl)
     })
@@ -347,7 +356,12 @@
 
     find('.menu_title', container).forEach(function (menuTitleEl) {
       var menuList = findAncestorWithClass('menu_list', menuTitleEl, container)
+
       if (!menuList.classList.contains('is-parent') || menuTitleEl.href) return
+      if (menuList.dataset.depth < page.navHeaderLevels) {
+        return
+      }
+
       menuTitleEl.style.cursor = 'pointer'
       menuTitleEl.addEventListener('click', function (e) {
         menuList.classList.toggle('closed')
