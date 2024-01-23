@@ -64,6 +64,13 @@
   //   feedBackFormBox.style.display = 'block'
   // })
 
+  $.ajax({
+    'url': 'https://couchbasecommunity.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e-T/tod1zk/b/4/b0105d975e9e59f24a3230a22972a71a/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector-embededjs/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector-embededjs.js?locale=en-GB&collectorId=a3b807e8',
+    'type': 'get',
+    'cache': true,
+    'dataType': 'script',
+  })
+
   window.ATL_JQ_PAGE_PROPS = {
     /*eslint quote-props: ["error", "always"]*/
     /*eslint-env es6*/
