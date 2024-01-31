@@ -2,7 +2,7 @@ var iframeLoader = new ChatBotUiLoader.IframeLoader();
 
 var chatbotUiconfig = {
     ui: {
-      parentOrigin: "http://localhost:8000",
+      parentOrigin: "https://preview.docs-test.couchbase.com",
       toolbarTitle: "Couchbase",
       toolbarLogo:
         "https://www.couchbase.com/wp-content/uploads/sites/3/2023/10/SDKs_Ottoman.svg",
