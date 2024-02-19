@@ -321,20 +321,10 @@
   }
 
   function extractComponentVersionInfo (hit) {
-    var name, title, version
-    var componentVersion = hit.component_version
-    if (componentVersion) {
-      componentVersion = (Array.isArray(componentVersion) ? componentVersion[0] : componentVersion).split('@')
-      name = componentVersion[0]
-      version = componentVersion[1]
-      title = hit.component_title
-    } else {
-      name = hit.component
-      componentVersion = (hit.hierarchy.lvl0 || name).split(/ (?=\d+(?:\.|$))/)
-      title = componentVersion[0]
-      version = componentVersion[1]
-    }
-    return { name: name, version: version, title: title }
+    return {
+      name: hit.component,
+      version: hit.cversion,
+      title: hit.component_title }
   }
 
   function renderFilters (components, filters) {
