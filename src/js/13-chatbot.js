@@ -25,7 +25,7 @@ var chatbotUiconfig = {
       enableLiveChat: false,
     },
     iframe: {
-      iframeOrigin: "https://sunny-cuchufli-4d28fb.netlify.app",
+      iframeOrigin: "http://cb-temp-ui-host.s3-website-us-east-1.amazonaws.com",
       shouldLoadIframeMinimized: true,
       iframeSrcPath: "/#/?lexWebUiEmbed=true",
     },
