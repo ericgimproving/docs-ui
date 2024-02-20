@@ -25,7 +25,7 @@ var chatbotUiconfig = {
       enableLiveChat: false,
     },
     iframe: {
-      iframeOrigin: "http://cb-temp-ui-host.s3-website-us-east-1.amazonaws.com",
+      iframeOrigin: "https://d2sozpdiqok6m4.cloudfront.net",
       shouldLoadIframeMinimized: true,
       iframeSrcPath: "/#/?lexWebUiEmbed=true",
     },
