@@ -60,7 +60,7 @@ module.exports = (src, dest, preview) => () => {
       // NOTE concat already uses stat from newest combined file
       .pipe(concat('js/site.js')),
     vfs
-      .src('js/vendor/*.js', { ...opts, read: false })
+      .src('js/vendor/+([^.])?(.bundle).js', { ...opts, read: false })
       .pipe(
         // see https://gulpjs.org/recipes/browserify-multiple-destination.html
         map((file, enc, next) => {
@@ -91,6 +91,9 @@ module.exports = (src, dest, preview) => () => {
       )
       .pipe(buffer())
       .pipe(uglify({ output: { comments: /^!/ } })),
+    vfs
+      .src('js/vendor/*.min.js', opts)
+      .pipe(map((file, enc, next) => next(null, Object.assign(file, { extname: '' }, { extname: '.js' })))),
     vfs.src(require.resolve('jquery/dist/jquery.min.js'), opts).pipe(concat('js/vendor/jquery.js')),
     vfs
       .src(['css/site.css', 'css/vendor/docsearch.css'], { ...opts, sourcemaps })
